@@ -1,0 +1,6 @@
+Changes
+MANIFEST			This list of files
+MANIFEST.SKIP
+Makefile.PL
+lib/Time/Piece/Month.pm
+t/month.t
