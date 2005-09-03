@@ -1,6 +1,10 @@
 Changes
+lib/Time/Piece/Month.pm
+Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
-Makefile.PL
-lib/Time/Piece/Month.pm
+README
 t/month.t
+t/pod-coverage.t
+t/pod.t
+META.yml                                 Module meta-data (added by MakeMaker)

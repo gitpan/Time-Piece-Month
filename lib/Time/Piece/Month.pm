@@ -5,7 +5,7 @@ use warnings;
 use base 'Time::Piece::Range';
 use Time::Seconds;
 
-our $VERSION = '0.01';
+our $VERSION = '1.00';
 
 =head1 NAME
 
@@ -31,6 +31,8 @@ calendar month.
 
 =head1 CONSTRUCTOR
 
+=head2 new
+
 	my $month = Time::Piece::Month->new(Time::Piece $tp);
 
 	my $month = Time::Piece::Month->new("2002-01-03");
@@ -54,7 +56,7 @@ sub _tp { Time::Piece->strptime(shift, "%Y-%m-%d") }
 
 As well as the inherited Time::Piece::Range methods, we also include:
 
-=head1 prev_month / next_month
+=head2 prev_month / next_month
 
 	my Time::Piece::Month $prev = $month->prev_month;
 	my Time::Piece::Month $next = $month->next_month;
@@ -90,20 +92,26 @@ sub wraparound_dates {
 		($self->next_month->dates)[ 0 .. $follow ];
 }
 
-=head1 COPYRIGHT
-
-Copyright (C) 2002-2003 Kasei. All rights reserved.
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
-
 =head1 AUTHOR
 
-Tony Bowden, E<lt>kasei@tmtm.comE<gt>.
+Tony Bowden
 
-=head1 SEE ALSO
+=head1 BUGS and QUERIES
 
-L<Class::DBI>. 
+Please direct all correspondence regarding this module to:
+  bug-Business-Barcode-EAN13@rt.cpan.org
+
+=head1 COPYRIGHT AND LICENSE
+
+  Copyright (C) 2002-2005 Kasei
+
+  This program is free software; you can redistribute it and/or modify it under
+  the terms of the GNU General Public License; either version 2 of the License,
+  or (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.
 
 =cut
 
